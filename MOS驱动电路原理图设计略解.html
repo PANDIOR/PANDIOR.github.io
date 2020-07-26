@@ -109,14 +109,13 @@ if (autoChangeMode === '1') {
 <li><p>V<sub>c</sub>（钳位电压）:出现浪涌现象时电路的最大电压，反映了TVS的浪涌抑制能力。V<sub>c</sub>必须小于电路的安全电压，V<sub>c</sub>一般大于V<sub>BR</sub>。</p>
 <blockquote>
 <p><strong>保护过程</strong>：</p>
-<p>在瞬态峰值脉冲电流作用下，流过TVS 的电流，由原来的反向漏电流I<sub>D</sub> 上升到I<sub>R</sub> 时，其两极呈现的电压由额定反向关断电压V<sub>rwm</sub>上升到击穿电压V<sub>BR</sub>，TVS 被击穿。随着峰值脉冲电流的出现，流过TVS 的电流达到峰值脉冲电流I<sub>pp</sub>。在其两极的电压被箝位到预定的最大箝位电压以下。尔后，随着脉冲电流按指数衰减，TVS 两极的电压也不断下降，最后恢复到起始状态。这就是TVS 抑制可能出现的浪涌脉冲功率，保护电子元器件的整个过程。</p>
+<p>在瞬态峰值脉冲电流作用下，流过TVS 的电流，由原来的反向漏电流I<sub>D</sub> 上升到I<sub>R</sub> 时，其两极呈现的电压由额定反向关断电压V<sub>rwm</sub>上升到击穿电压V<sub>BR</sub>，TVS 被击穿。随着峰值脉冲电流的出现，流过TVS 的电流达到峰值脉冲电流I<sub>pp</sub>。在其两极的电压被箝位到预定的最大箝位电压以下。尔后，随着脉冲电流按指数衰减，TVS 两极的电压也不断下降，最后恢复到起始状态。这就是TVS 抑制可能出现的浪涌脉冲功率，保护电子元器件的整个过程。<br><strong>双向TVS（Bi）</strong>用于交流电或来自正负双向脉冲的场合。TVS有时也用于减少电容。如果电路只有正向电平信号，那么单向TVS就足够了。<br><strong>单向TVS（Uni）</strong>操作方式如下：正向浪涌时,TVS处于反向雪崩击穿状态；反向浪涌时，TVS类似正向偏置二极管一样导通并吸收浪涌能量。</p>
 </blockquote>
 </li>
 </ul>
+<p>（注：还有一些重要参数例如最大脉冲峰值电流I<sub>pp</sub>等没有说明，因为一般来说都能满足智能车需求）</p>
 </li>
 </ul>
-<pre><code>&gt; **双向TVS（Bi）**用于交流电或来自正负双向脉冲的场合。TVS有时也用于减少电容。如果电路只有正向电平信号，那么单向TVS就足够了。
-&gt; **单向TVS（Uni）**操作方式如下：正向浪涌时,TVS处于反向雪崩击穿状态；反向浪涌时，TVS类似正向偏置二极管一样导通并吸收浪涌能量。</code></pre><p>  （注：还有一些重要参数例如最大脉冲峰值电流I<sub>pp</sub>等没有说明，因为一般来说都能满足智能车需求）</p>
 <p><del>不过智能车无脑选<code>SMAJ16CA</code> 就行了。</del></p>
 <p><img src= "/img/loading.gif" data-src="http://img.pandior.ink/image-20200531110624271.png?imageMogr2/format/png/blur/1x0/quality/100%7Cwatermark/2/text/cGFuZGlvci5pbms=/font/dmlqYXlh/fontsize/1760/fill/I0VDQUQ5RQ==/dissolve/58/gravity/SouthEast/dx/20/dy/20%7Cimageslim" alt="伏安特性曲线"></p>
 <h2 id="MOS-管选型："><a href="#MOS-管选型：" class="headerlink" title="MOS 管选型："></a>MOS 管选型：</h2><ol>
